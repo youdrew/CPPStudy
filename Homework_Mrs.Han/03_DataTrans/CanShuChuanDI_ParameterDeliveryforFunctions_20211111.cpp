@@ -18,7 +18,7 @@ void change2(int &m){
 
 //指针传递
 void change3(int *n){
-        cout<<"指针传递--函数操作地址 "<<n<<endl;     //可以在这个文件Homework_Mrs.Han/DataTrans/pointer_test_20201209.cpp 看指针的用法
+        cout<<"指针传递--函数操作地址 "<<n<<endl;     //可以在这个文件Homework_Mrs.Han/03_DataTrans/pointer_test_20201209.cpp 看指针的用法
         *n=*n+1;
      }
 
