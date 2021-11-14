@@ -1,4 +1,4 @@
-// 【学习目标】 静态数据成员
+// 【学习目标】  静态成员函数
 // Created by Youdrew on 2021/11/14.
 //
 
@@ -6,15 +6,10 @@
 
 /*
  *
- *      静态数据成员：
- *                  用关键字static声明
- *                  为该类的所有对象共享，静态数据成员具有静态生存期。
- *                  它是属于类的，不属于类中的对象的。
- *                  相当于是"共享数据"，一个改变了，其他的都改变。是所有对象共同维护的一个数据，有点类似与"团体分数"。
- *
- *
- *
- *
+ *      静态函数成员：
+ *                  类外代码可以使用类名和作用域操作符来调用静态成员函数。
+ *                  只能使用静态（不能使用普通成员变量）
+
  *
  */
 
@@ -27,6 +22,7 @@ public:
     static string Membership;
     void Print(){cout << "这个学生的班级是：" << Membership <<"，他们的分数是："<< TeamScore << endl;};
     void ScorePlus(){TeamScore++;};
+    static void ScoreReset(){TeamScore=0;};                                     //静态成员函数；
 
 private:
     int Age;
@@ -47,4 +43,8 @@ int main(){
     Student student2;
     student2.ScorePlus();
     student2.Print();
+
+    Student student3;
+    student3.ScoreReset();
+    student3.Print();
 }
