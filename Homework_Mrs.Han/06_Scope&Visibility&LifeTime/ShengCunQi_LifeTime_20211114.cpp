@@ -32,8 +32,6 @@
 
 
 #include<iostream>
-#include <tkDecls.h>
-
 using namespace std;
 
 int i =1;                                           //i全局变量，静态生存期：在命名空间作用域中，都是有静态生存期
