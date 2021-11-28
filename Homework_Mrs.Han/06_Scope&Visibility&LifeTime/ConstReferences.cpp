@@ -12,7 +12,7 @@ using namespace std;
 class Point { //Point类定义
 
 public: //外部接口
-    Point(int x = 0, int y = 0):x(x), y(y) {}
+    Point(int x = 0, int y = 0){}
     int getX() { return x; }
     int getY() { return y; }
 

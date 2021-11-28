@@ -31,8 +31,8 @@ using namespace std;
 using std::setw;
 using namespace std;
 
-void arrayTest(int T[]){      //数组在作为行参的时候，不能定义为常量，❌设置 T[][]两个空值
-
+void arrayTest(int T[]){      //数组在作为行参的时候，不能定义为常量，❌不能设置 T[][]两个空值 因为这样编译器就不知道如何分配内存
+    
 }
 
 

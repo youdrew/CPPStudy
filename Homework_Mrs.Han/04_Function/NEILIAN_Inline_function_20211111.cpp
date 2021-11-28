@@ -15,6 +15,7 @@ using namespace std;
 
 
 
+
 inline double Max(double x, double y)
 {
     return (x > y)? x : y;
