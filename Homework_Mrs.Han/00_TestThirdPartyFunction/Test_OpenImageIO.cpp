@@ -4,11 +4,13 @@
 
 
 
+
 #include <OpenImageIO/imageio.h>
-
+#include <QtCore/QCoreApplication>
 #include <iostream>
-using namespace std;
 
+using namespace std;
+OIIO_NAMESPACE_USING
 
 
 
@@ -17,7 +19,9 @@ using namespace std;
 
 int main(){
     auto path= "/Users/youdrew/Pictures/Untitled(2).tif";
-    unique_ptr test=std::move(OpenImageIO_v2_3::ImageInput::open(path));
+    unique_ptr test=std::move(ImageInput::open(path));
+
+    QCoreApplication app(argc, (char**)argv);
 
 
     return 0;

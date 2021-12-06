@@ -38,8 +38,23 @@ using namespace std;
 
 
 int main(){
+    int a = 7;
+    int *p1 = &a;//建立常规指针
 
+    unique_ptr<int>up1(p1); //新建了一个up1
 
+    cout << *p1 << "," << *up1 <<endl;
+
+    unique_ptr up2 = move(up1);
+    cout<< *up2 <<endl;
+    if (up1!=nullptr){         //判断up1是不是空指针
+        cout<< *up1 <<endl;     //不是
+    }
+    else{
+        cout << "*up1里面没东西了";
+        delete &up1;
+        delete p1;
+    }
 
     return 0;
 }
