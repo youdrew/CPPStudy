@@ -1,0 +1,3 @@
+/Users/youdrew/CLionProjects/CPPStudy/CMakeFiles/CPPStudy.dir
+/Users/youdrew/CLionProjects/CPPStudy/CMakeFiles/edit_cache.dir
+/Users/youdrew/CLionProjects/CPPStudy/CMakeFiles/rebuild_cache.dir

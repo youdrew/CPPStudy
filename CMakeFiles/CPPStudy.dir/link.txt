@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/CPPStudy.dir/Homework_Mrs.Han/02_DataType/Vector_20211111.cpp.o -o CPPStudy 
