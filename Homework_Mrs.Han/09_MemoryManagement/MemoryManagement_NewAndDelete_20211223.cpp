@@ -7,7 +7,7 @@
 
 
 
-#include "/Users/youdrew/CLionProjects/CPPStudy/Homework_Mrs.Han/07_StructureofCPP/Point.h"
+#include "/Users/youdrew/CLionProjects/CPPStudy/Homework_Mrs.Han/05_Class&Object/Circle.h"
 #include <iostream>
 using namespace std;
 
@@ -27,11 +27,27 @@ int main() {
         cout << ptr3[i] << endl;
     }
 
-    delete[] ptr2,ptr3;                    //释放刚刚512个字节，但是指针的值是没有变化的，所以
-    ptr2,ptr3=NULL;                        //一般在释放完成之后，将指针指向NULL防止误用
+    delete ptr2;
+    delete[] ptr3;                    //释放刚刚512个字节，但是指针的值是没有变化的，所以
+    ptr3=NULL;                        //一般在释放完成之后，将指针指向NULL防止误用
+    ptr2=NULL;
 
+    //—————————————————————————————————————————使用new动态创建一个对象—————————————————————————————————————————————
 
+    /*
+     * new 申请内存+调用构造函数
+           molloc不会调用构造函数，同时使用new的时候可以传递构造函数的参数。
+           new多个对象(数组)的时候，不能传参数，要求该类必须有默认构造函数。
 
+     * delete 调用析构+释放内存
+     */
+
+    Circle *ptr4 = new Circle();          //使用默认构造函数
+    Circle *ptr5 = new Circle(3,3,5); //使用构造函数
+
+    cout <<"X:  "<< ptr5->getXcoord() <<";  Y: "<< ptr5->getYcoord() << endl;
+
+    delete ptr4;delete ptr5;
 
     return 0;
 }
