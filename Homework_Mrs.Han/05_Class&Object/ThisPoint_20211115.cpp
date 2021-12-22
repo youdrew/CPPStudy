@@ -17,9 +17,13 @@ using namespace std;
 class Animal{
 public:
     void Show(int Age){
-        cout << Age << this->Age << endl;
+
+
+        cout << Age << " / " << this->Age << " / " << (*this).Age <<endl;   //两种写法，第一种直接写Age，其实前面有一个默认的this指针的。在写(*this).Age一定要注意加括号，因为.的优先级比*要高
         this->Age = Age;      //如果写作：Age=Age，就是给函数形参重新赋值。这么写，左边的就是private下的Age
-        cout << Age << this->Age << endl;
+        cout << Age << " / " << this->Age << " / " << (*this).Age << endl;
+
+        cout << "this指针的值是：" << this << endl;
     };
 private:
     string Kind;
@@ -31,4 +35,6 @@ private:
 int main(){
     Animal animal1;
     animal1.Show(2);
+
+    cout << "对象的地址是：" << &animal1 << endl;  //谁调用this，this指针就指向谁
 }
