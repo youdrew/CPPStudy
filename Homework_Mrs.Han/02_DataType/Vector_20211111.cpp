@@ -1,6 +1,6 @@
 //【学习目标】向量类型
 // Created by Youdrew on 2021/11/11.
-//
+// 这里介绍了标准模版库STL里面的Vector容器。
 
 
 
@@ -13,10 +13,17 @@ using namespace std;
 int main(){
     vector <int> A(10,0);     //初始化一个叫A的向量，有10个值，每个都是0
     A.push_back(111);                //后面加一个111
-    A.push_back(222);               //后面加一个222
+    A.pop_back();               //删除最后一个元素
     A.push_back(333);               //后面加一个333
 
-    cout << A[2] << A[11] << endl;
+    //调用查看 vector里面的内容
+    cout << A[2] << " " << A[11] << endl;  //打印A里面第3个元素和第12个元素。
+
+
+
+    cout << A.front() << endl;  //返回第一个元素
+    cout << A.back() << endl; //返回最后一个元素
+    A.insert(A.cbegin()+1,7);//在第2个元素上插入一个7
 
     for (int i = 0; i < A.size(); ++i) {
         cout << A[i] << endl;
