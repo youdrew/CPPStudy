@@ -25,7 +25,6 @@ public:
         cout << "一个tesla对象被创建出来" << endl;
         char Name[128]="tesla";
         setTrademark(Name);
-        printTrademark();
     }
 
     ~tesla(){        //使用构造函数修改Vehicle里面存在的trademark属性
@@ -39,6 +38,10 @@ public:
     virtual int printTrademark(){
         cout << "the trademark is " << trademark << "（通过子类的函数打印）" << endl;
     };
+
+    virtual int PrueVirtualFunction(){
+        cout << "tesla执行了这个纯虚函数" << endl;
+    }
 
 protected:
 

@@ -32,6 +32,7 @@ public:
         cout << "the trademark is " << trademark << endl;
     };
 
+    virtual int PrueVirtualFunction()=0;    //父类里面定义的一个纯虚函数。
 
 
 protected://"保护"的内容能被继承，但是不能被外部访问。
