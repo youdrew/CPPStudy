@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 #include_directories(${OpenImageIO_INCLUDE_DIR})
 #include_directories("/usr/local/Cellar/imath/3.1.3/include")
 
-add_executable(CPPStudy Homework_Mrs.Han/10_PureVirtualFunction/OverrideAndFinal_20220207.cpp)   # 可执行文件的名称叫做CPPStudy 依赖于.cpp这个文件
+add_executable(CPPStudy Homework_Mrs.Han/05_Class&Object/Vehicle.h Homework_Mrs.Han/05_Class&Object/tesla.h Homework_Mrs.Han/05_Class&Object/PrueVirtual_20220204.cpp)   # 可执行文件的名称叫做CPPStudy 依赖于.cpp这个文件
 
 
 #target_link_libraries(CPPStudy ${OpenImageIO_LIBS})

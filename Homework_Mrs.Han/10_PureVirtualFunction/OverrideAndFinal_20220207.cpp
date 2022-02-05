@@ -30,15 +30,33 @@ public:
                                     // "virtual int function1() override{}; "
                                     // 会在编译的时候出错。
     virtual int function2(){};
+
+    virtual int function3(){};
+
 };
 
 
 class derived :public Base{
 public:
-    virtual int function1() override{}; // ⚠️这是在强制地告诉编译器，我要重新写这个函数。
-    virtual int function2() final{};    // ⚠️这里加了final就意味着，不能再重新写这个虚函数了。
+    virtual int function1() override{}; // ⚠️这是在强制地告诉编译器，我要重新写这个函数。也叫"覆盖（重写）"。
+                                        // 如果它没有发现之前的virtual，它会报错。
+                                        //   不同的范围，分别位于基类和派生类中
+                                        //   函数的名字相同
+                                        //   参数相同
+                                        //   基类函数必须有virtual关键字
+
+    virtual int function1(int a){};     // overload 重载
+                                        // ⚠️函数名相同，参数列表不同
+                                        // 相同的范围(在同一个类中)
+                                        // 函数名字相同
+                                        // 参数不同
+                                        // virtual关键字可有可无
+
+
+    virtual int function3() final{};    // ⚠️这里加了final就意味着，不能再重新写这个虚函数了。
 };
 
-class derived2 final : public Base{     //
+
+class derived2 final : public Base{     // ⚠️这里加了final之后，意味着这里就是虚函数的头了
 
 };
